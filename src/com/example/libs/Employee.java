@@ -3,13 +3,13 @@ public class Employee {
 
 	private String empno;
 	private int base, night, family;
-	private String name, dname,
-	private int hopay, fampay, nightpay, total, salary;
+	private String name, dname;
+	private int  hopay, fampay, nightpay, total, salary;
 
 	public Employee() {
 	}
 
-	public Employee(String name, String empno, int base, int night, int family) {
+	public Employee(String empno, String name, int base, int night, int family) {
 		super();
 		this.empno = empno; // 사원번호
 		this.name = name; // 사원이름
@@ -109,7 +109,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return String.format("%-5s%5s%5s%5d%10d%7d%7d%10d%10d",
+		return String.format("%-5s%5s%5s\t%5d%,10d%,7d%,7d%,10d%,10d",
 				empno, name, dname, base, hopay, fampay, nightpay, total, salary);
 	}
 

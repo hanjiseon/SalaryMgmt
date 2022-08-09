@@ -31,17 +31,16 @@ public class Calc {
 			emp.setNightpay(nightpay); //야근수당 셋팅
 			
 			
-			int base = emp.getBase();
-			int basePay = this.getBase(base);	//기본급
-			emp.setBase(basePay);		//기본급수당 셋팅
+			int base = emp.getBase();   //기본급
+			int basePay = this.getBase(base);	//기본급 수당
 			
-			
+		
 			int family = emp.getFamily();	//가족수
 			int famPay = 7000 * family;
 			emp.setFampay(famPay);   //가족수당 셋팅
 			
 			
-			int total = hopay + basepay + nightpay + famPay; //총금액
+			int total = hopay + basePay + nightpay + famPay; //총금액
 			emp.setTotal(total); 		//총금액셋팅
 			
 			
@@ -64,7 +63,9 @@ public class Calc {
 
 	private String getDname(char code) { // 부서코드로 부서명을 얻기 위한 메소드
 		String[] dnames = { "영업부", "업무부", "홍보부", "인사부", "경리부", "판촉부", "총무부" };
+//		System.out.println("code:" +code);
 		return dnames[code - 65];
+//		return null;
 
 	}
 

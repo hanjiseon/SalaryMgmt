@@ -14,6 +14,7 @@ public class InputTest {
 		Employee [] array = new Employee[1];
 		Input input = new Input(array);
 		int count = input.input();
+		
 //		assertNotNull(array[0]);
 //		assertEquals(1, count);
 		assertEquals("A512", array[0].getEmpno());
